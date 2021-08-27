@@ -2,20 +2,14 @@
 <Patch>
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Vanilla Factions Expanded - Vikings</li>
+      <li>Vanilla Furniture Expanded - Art</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationAdd">
           <xpath>Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements/li[@Class="RoomRequirement_ThingAnyOfCount"][things/li="Column"]/things</xpath>
           <value>
-            <li>VFEV_RunedColumn</li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="VFEV_FurBed" or defName="VFEV_DoubleFurBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-          <value>
-            <li>SleepAccelerator</li>
+            <li>VFE_Pillar</li>
           </value>
         </li>
       </operations>

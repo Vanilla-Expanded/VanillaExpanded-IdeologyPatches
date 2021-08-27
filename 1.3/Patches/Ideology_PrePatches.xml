@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements//li[4]</xpath>
+    <xpath>Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements/li[@Class="RoomRequirement_ThingCount"][thingDef="Column"]</xpath>
     <value>
-      <li Class="VERP.RoomRequirement_ThingAnyOfCount">
+      <li Class="RoomRequirement_ThingAnyOfCount">
         <things>
           <li>Column</li>
         </things>

@@ -8,7 +8,6 @@
   <packageId>OskarPotocki.VanillaExpanded.IdeologyPatches</packageId>
   <description>Vanilla Expanded Ideology patches is a large collection of patches for all of our Vanilla Expanded mods, bringing key functionality to complement Ideology DLC mechanics. This patch collection will be constantly updated as time goes on with new Vanilla Expanded mods.</description>
   <loadAfter>
-    <li>OskarPotocki.VanillaExpanded.RoyaltyPatches</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>Ludeon.RimWorld.Ideology</li>
     <li>Ludeon.RimWorld.Royalty</li>
