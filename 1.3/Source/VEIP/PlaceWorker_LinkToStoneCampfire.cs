@@ -12,9 +12,13 @@ namespace VEIP
         public override void DrawGhost(ThingDef def, IntVec3 center, Rot4 rot, Color ghostCol, Thing thing = null)
         {
             GenDraw.DrawRadiusRing(center, this.range);
-            List<Thing> forCell = Find.CurrentMap.listerBuldingOfDefInProximity.GetForCell(center, this.range, VEIP_DefOf.Stone_Campfire);
-            for (int index = 0; index < forCell.Count; ++index)
-                GenDraw.DrawLineBetween(GenThing.TrueCenter(center, Rot4.North, def.size, def.Altitude), forCell[index].TrueCenter(), SimpleColor.Green);
+            ThingDef campfire = DefDatabase<ThingDef>.GetNamedSilentFail("Stone_Campfire");
+            if (campfire != null)
+            {
+                List<Thing> forCell = Find.CurrentMap.listerBuldingOfDefInProximity.GetForCell(center, this.range, campfire);
+                for (int index = 0; index < forCell.Count; ++index)
+                    GenDraw.DrawLineBetween(GenThing.TrueCenter(center, Rot4.North, def.size, def.Altitude), forCell[index].TrueCenter(), SimpleColor.Green);
+            }
         }
     }
 }
