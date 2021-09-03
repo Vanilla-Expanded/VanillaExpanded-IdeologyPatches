@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlaceWorker_LinkToHearth.cs" />
     <Compile Include="PlaceWorker_LinkToStoneCampfire.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

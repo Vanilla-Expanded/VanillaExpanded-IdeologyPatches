@@ -18,6 +18,49 @@
             <li>SleepAccelerator</li>
           </value>
         </li>
+        <!-- Heart for drum party -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualObligationTargetFilterDef[defName="RitualSpotOrCampfireParty"]/thingDefs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
+          <value>
+            <li Class="StageFailTrigger_TargetThingMissing">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <desc>Campfire is missing.</desc>
+            </li>
+            <li Class="StageFailTrigger_TargetNotLit">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <desc>Campfire is not lit.</desc>
+            </li>
+            <li Class="StageFailTrigger_NoThingPresent">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <thingDef>Drum</thingDef>
+              <desc>No drums.</desc>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Drum"]/placeWorkers</xpath>
+          <value>
+            <li>VEIP.PlaceWorker_LinkToHearth</li>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
