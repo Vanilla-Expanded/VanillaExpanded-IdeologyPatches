@@ -13,6 +13,7 @@
     <li>Ludeon.RimWorld.Royalty</li>
     <li>Ludeon.RimWorld</li>
     <li>brrainz.harmony</li>
+    <li>vanillaexpanded.vweft</li>
   </loadAfter>
   <modDependencies>
     <li>
