@@ -96,12 +96,16 @@
                       <defs>
                         <li>Campfire</li>
                         <li>TorchLamp</li>
+                        <li>VFEM_WallTorchDarkLamp</li>
+                        <li>VFEM_WallTorchLamp</li>
+                        <li>VFEM_DarkCandle</li>
+                        <li>VFEM_Candle</li>
                         <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
                         <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
-                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Stone_DarklightCampfire</li>
-                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Stone_Campfire</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_DarklightCampfire</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_Campfire</li>
                         <li MayRequire="OskarPotocki.VFE.Vikings">VFEV_DarkHearth</li>
                         <li MayRequire="OskarPotocki.VFE.Vikings">VFEV_Hearth</li>
                       </defs>
@@ -219,9 +223,18 @@
                       <defs>
                         <li>Campfire</li>
                         <li>TorchLamp</li>
+                        <li>VFEM_WallTorchDarkLamp</li>
+                        <li>VFEM_WallTorchLamp</li>
+                        <li>VFEM_DarkCandle</li>
+                        <li>VFEM_Candle</li>
                         <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+                        <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_DarklightCampfire</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_Campfire</li>
+                        <li MayRequire="OskarPotocki.VFE.Vikings">VFEV_DarkHearth</li>
+                        <li MayRequire="OskarPotocki.VFE.Vikings">VFEV_Hearth</li>
                       </defs>
                       <offsetPerBuilding>0.01</offsetPerBuilding>
                       <radius>9.9</radius>

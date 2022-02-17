@@ -15,6 +15,9 @@
     <li>brrainz.harmony</li>
     <li>vanillaexpanded.vweft</li>
   </loadAfter>
+  <loadBefore>
+    <li>OskarPotocki.VanillaExpanded.RoyaltyPatches</li>
+  </loadBefore>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Ideology</packageId>

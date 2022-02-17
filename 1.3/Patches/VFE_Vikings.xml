@@ -6,61 +6,6 @@
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements/li[@Class="RoomRequirement_ThingAnyOfCount"][things/li="Column"]/things</xpath>
-          <value>
-            <li>VFEV_RunedColumn</li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="VFEV_FurBed" or defName="VFEV_DoubleFurBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-          <value>
-            <li>SleepAccelerator</li>
-          </value>
-        </li>
-        <!-- Heart for drum party -->
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/RitualObligationTargetFilterDef[defName="RitualSpotOrCampfireParty"]/thingDefs</xpath>
-          <value>
-            <li>VFEV_Hearth</li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
-          <value>
-            <li>VFEV_Hearth</li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
-          <value>
-            <li Class="StageFailTrigger_TargetThingMissing">
-              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
-              <desc>Hearth is missing.</desc>
-            </li>
-            <li Class="StageFailTrigger_TargetNotLit">
-              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
-              <desc>Hearth is not lit.</desc>
-            </li>
-            <li Class="StageFailTrigger_NoThingPresent">
-              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
-              <thingDef>Drum</thingDef>
-              <desc>No drums.</desc>
-            </li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
-          <value>
-            <li>VFEV_Hearth</li>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Drum"]/placeWorkers</xpath>
-          <value>
-            <li>VEIP.PlaceWorker_LinkToHearth</li>
-          </value>
-        </li>
         <!-- Darklight stuff <glowColor>(78, 226, 229, 0)</glowColor> -->
         <!-- VFEV_DarkHearth -->
         <li Class="PatchOperationAdd">
@@ -104,6 +49,7 @@
               <placeWorkers>
                 <li>PlaceWorker_Heater</li>
                 <li>PlaceWorker_NeverAdjacentUnstandable</li>
+                <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
               </placeWorkers>
               <canOverlapZones>false</canOverlapZones>
               <altitudeLayer>Building</altitudeLayer>
@@ -157,12 +103,16 @@
                       <defs>
                         <li>Campfire</li>
                         <li>TorchLamp</li>
+                        <li>VFEV_Hearth</li>
+                        <li>VFEV_DarkHearth</li>
                         <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
                         <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
                         <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
-                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Stone_DarklightCampfire</li>
-                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Stone_Campfire</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_DarklightCampfire</li>
+                        <li MayRequire="VanillaExpanded.VFECore">Stone_Campfire</li>
+                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_DarkCandle</li>
+                        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_WallTorchDarkLamp</li>
                       </defs>
                       <radius>9.9</radius>
                       <maxBuildings>8</maxBuildings>
@@ -186,6 +136,87 @@
                 <li>ComplexFurniture</li>
               </researchPrerequisites>
             </ThingDef>
+          </value>
+        </li>
+        <!-- Other -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements/li[@Class="RoomRequirement_ThingAnyOfCount"][things/li="Column"]/things</xpath>
+          <value>
+            <li>VFEV_RunedColumn</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="VFEV_FurBed" or defName="VFEV_DoubleFurBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+          <value>
+            <li>SleepAccelerator</li>
+          </value>
+        </li>
+        <!-- Heart for drum party -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualObligationTargetFilterDef[defName="RitualSpotOrCampfireParty"]/thingDefs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+            <li>VFEV_DarkHearth</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+            <li>VFEV_DarkHearth</li>
+          </value>
+        </li>
+        <!-- Fail trigger -->
+        <!-- Hearth -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
+          <value>
+            <li Class="StageFailTrigger_TargetThingMissing">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <desc>Hearth is missing.</desc>
+            </li>
+            <li Class="StageFailTrigger_TargetNotLit">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <desc>Hearth is not lit.</desc>
+            </li>
+            <li Class="StageFailTrigger_NoThingPresent">
+              <onlyIfTargetIsOfDef>VFEV_Hearth</onlyIfTargetIsOfDef>
+              <thingDef>Drum</thingDef>
+              <desc>No drums.</desc>
+            </li>
+          </value>
+        </li>
+        <!-- Darkhearth-->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
+          <value>
+            <li Class="StageFailTrigger_TargetThingMissing">
+              <onlyIfTargetIsOfDef>VFEV_DarkHearth</onlyIfTargetIsOfDef>
+              <desc>Hearth is missing.</desc>
+            </li>
+            <li Class="StageFailTrigger_TargetNotLit">
+              <onlyIfTargetIsOfDef>VFEV_DarkHearth</onlyIfTargetIsOfDef>
+              <desc>Hearth is not lit.</desc>
+            </li>
+            <li Class="StageFailTrigger_NoThingPresent">
+              <onlyIfTargetIsOfDef>VFEV_DarkHearth</onlyIfTargetIsOfDef>
+              <thingDef>Drum</thingDef>
+              <desc>No drums.</desc>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>VFEV_Hearth</li>
+            <li>VFEV_DarkHearth</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Drum"]/placeWorkers</xpath>
+          <value>
+            <li>VEIP.PlaceWorker_LinkToHearth</li>
+            <li>VEIP.PlaceWorker_LinkToDarkHearth</li>
           </value>
         </li>
       </operations>
