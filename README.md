@@ -11,17 +11,17 @@
 ### Vanilla Furniture Expanded - Art:
   - Add pillar as column replacement
 
-### Vanilla Faction Expanded - Vikings:
-  - Add runed column as column replacement
-  - Sleep accelerator work with fur beds
-  - Hearth can be used as campfire replacement for dance party
-  - Add a darklight version of the hearth
-
 ### Vanilla Furniture Expanded - Spacer:
   - Add darklight end table
   - Add darklight dresser
   - Add darklight outdoor solar lamp
   - Add darklight spacer lamp
+
+### Vanilla Faction Expanded - Vikings:
+  - Add runed column as column replacement
+  - Sleep accelerator work with fur beds
+  - Hearth can be used as campfire replacement for dance party
+  - Add a darklight version of the hearth
 
 ### Vanilla Faction Expanded - Medieval:
   - Add darklight candle
@@ -29,6 +29,9 @@
 
 ### Vanilla Faction Expanded - Ancient:
   - Add darklight wall lamp
+
+### Rim-Effect: Core
+  - Sleep accelerator work with prefabs beds (single, double, medical)
 
 ### Vanilla Weapons Expanded:
   - Add "Neolithic" weapon class to:
