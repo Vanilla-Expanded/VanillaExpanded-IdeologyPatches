@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zFEximIeLLbtvfY1u8jYo8Xyk15GSrAi68bAx1LKGFEIKMxEA74nI4t5ybWPjKOa5jkUxVc+PoRGTccC5BvQLA==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaExpandedIdeologyPatches\\1.3\\Source\\VEIP\\VEIP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kylia\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3102\\krafs.rimworld.ref.1.3.3102.nupkg.sha512"
+  ],
+  "logs": []
+}
