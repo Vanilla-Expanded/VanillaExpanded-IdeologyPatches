@@ -70,6 +70,19 @@
             <li>VEIP.PlaceWorker_LinkToDarkStoneCampfire</li>
           </value>
         </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Stone_Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <value>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
         <!-- Darklight stuff <glowColor>(78, 226, 229, 0)</glowColor> -->
         <!-- Stone_DarklightCampfire -->
         <li Class="PatchOperationAdd">
