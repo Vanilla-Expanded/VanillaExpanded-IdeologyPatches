@@ -83,8 +83,7 @@
             <li>Stone_DarklightCampfire</li>
           </value>
         </li>
-        <!-- Darklight stuff <glowColor>(78, 226, 229, 0)</glowColor> -->
-        <!-- Stone_DarklightCampfire -->
+        <!-- Stone_DarklightCampfire and work givers-->
         <li Class="PatchOperationAdd">
           <xpath>/Defs</xpath>
           <value>
@@ -215,6 +214,38 @@
                 </li>
               </modExtensions>
             </ThingDef>
+            <WorkGiverDef>
+              <defName>DoBillsCookStone_DarklightCampfire</defName>
+              <label>cook meals at stone campfire</label>
+              <giverClass>WorkGiver_DoBill</giverClass>
+              <workType>Cooking</workType>
+              <priorityInType>97</priorityInType>
+              <fixedBillGiverDefs>
+                <li>Stone_DarklightCampfire</li>
+              </fixedBillGiverDefs>
+              <verb>cook</verb>
+              <gerund>cooking at</gerund>
+              <requiredCapacities>
+                <li>Manipulation</li>
+              </requiredCapacities>
+              <prioritizeSustains>true</prioritizeSustains>
+            </WorkGiverDef>
+            <WorkGiverDef>
+              <defName>DoBillsHaulStone_DarklightCampfire</defName>
+              <label>do bills at stone campfire</label>
+              <giverClass>WorkGiver_DoBill</giverClass>
+              <workType>Hauling</workType>
+              <priorityInType>30</priorityInType>
+              <fixedBillGiverDefs>
+                <li>Stone_DarklightCampfire</li>
+              </fixedBillGiverDefs>
+              <verb>work at</verb>
+              <gerund>working at</gerund>
+              <requiredCapacities>
+                <li>Manipulation</li>
+              </requiredCapacities>
+              <prioritizeSustains>true</prioritizeSustains>
+            </WorkGiverDef>
           </value>
         </li>
       </operations>
